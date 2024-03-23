@@ -8,4 +8,9 @@ class ProdutoController
     {
         return true;
     }
+
+    public function calca()
+    {
+
+    }
 }
