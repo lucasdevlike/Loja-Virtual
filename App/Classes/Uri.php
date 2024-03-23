@@ -8,7 +8,7 @@ class Uri
 
     public function __construct()
     {
-        $this->uri = $_SERVER['REQUESTI_URI '];
+        $this->uri = $_SERVER['REQUEST_URI'];
     }
 
     public function emptyUri()
