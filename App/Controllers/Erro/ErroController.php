@@ -4,4 +4,8 @@ namespace App\Controllers\Erro;
 
 class ErroController
 {
+    public function index()
+    {
+        dump('erro');
+    }
 }

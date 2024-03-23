@@ -6,7 +6,8 @@
             "App\\Models\\": "App/Models",
             "App\\Interfaces\\": "App/Interfaces",
             "App\\Repositories\\": "App/Repositories",
-            "App\\Classes\\": "App/Classes"
+            "App\\Classes\\": "App/Classes",
+            "App\\Controllers\\Erro\\": "App/Controllers/Erro"
         }
     },
     "authors": [
