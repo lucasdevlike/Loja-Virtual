@@ -3,8 +3,13 @@
 use App\Controllers\Controller;
 use App\Controllers\Method;
 
-$controller = new Controller();
-$object = $controller->controller();
+$callController = new Controller();
+$calledController = $callController->controller();
 
-$method = new Method();
-dump($method->method($object));
+$controller = new $calledController();
+
+$callMethod = new Method();
+$method = $callMethod->method($controller);
+
+
+$controller->$method();

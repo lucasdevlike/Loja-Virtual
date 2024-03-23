@@ -6,11 +6,11 @@ class ProdutoController
 {
     public function index()
     {
-        return true;
+        dump('index');
     }
 
     public function calca()
     {
-
+        dump('calça');
     }
 }
