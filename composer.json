@@ -18,6 +18,6 @@
     ],
     "require": {
         "symfony/var-dumper": "^7.0",
-        "twig/twig": "^3.8"
+        "twig/twig": "^1.24"
     }
 }
