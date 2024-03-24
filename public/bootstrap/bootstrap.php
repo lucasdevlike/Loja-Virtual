@@ -3,6 +3,7 @@
 use App\Classes\Template;
 use App\Controllers\Controller;
 use App\Controllers\Method;
+use App\Classes\Parameters;
 
 $template = new Template();
 $twig = $template->init();
@@ -29,4 +30,6 @@ $method = $callMethod->method($controller);
 /**
  * Chamando o controller atraves da classe controller e da classe method
  */
-$controller->$method();
+$parameters = new Parameters();
+$parameter = $parameters->getParameterMethod($controller, $method);
+$controller->$method($parameter);
