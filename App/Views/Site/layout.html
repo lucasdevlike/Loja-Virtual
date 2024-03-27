@@ -1,14 +1,115 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br" xml:lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{titulo}}</title>
+    <title>{{ title }}</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="robots" content="index, follow" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/table.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/button.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/form.css">
+    <link rel="stylesheet" type="text/css" href="{{ site_url() }}/assets/css/style.css" />
+
+    <script type="text/javascript" src="{{ site_url() }}/assets/js/boxOver.js"></script>
 </head>
 
 <body>
-    {% block site_content %} {% endblock %}
+    <div id="main_container">
+        <div class="top_bar">
+            <!--- Include do top--->
+            <div id="main_content">
+                <div id="menu_tab">
+                    <!--Include do menu-->
+                </div>
+                <div class="crumb_navigation">
+                    <!--breadcrumb-->
+                </div>
+                <div class="left_content">
+                    <div class="title_box">
+                        Categorias
+                    </div>
+                    <ul class="left_menu">
+                        <!--Include left Menu-->
+                    </ul>
+                    <div class="title_box">
+                        Promoção
+                    </div>
+                    <div class="border_box">
+                        <div class="product_title"><!--Nome do produto promoção --></div>
+                        <div class="product_img"><!--Imagem produto promoção--></div>
+                        <div class="prod_price"><!--Preço do produto--></div>
+                    </div>
+                    <div class="title_box">Newslatter</div>
+                    <div class="border_box">
+                        <input type="text" name="newsletter" value="Seu e-mail">
+                        <a href="" class="join">Cadastrar e-mail</a>
+                        <div class="banner_adds">
+                            <a href="">
+                                <!-- banner propaganda<img src="" alt=""> -->
+                            </a>
+                        </div>
+                    </div>
+                    <div class="center_content">
+                        {% block content %} {% endblock %}
+                    </div>
+
+                    <div class="right_content">
+                        <div class="shopping_cart">
+                            <div class="cart_title">Carrinho de compras</div>
+                            <div class="cart_details">
+                                <span id="products_cart"><!--Numero de produtos no carrinho--></span> <br>
+                                <span class="border_cart">Total: </span>
+                                <span class="price"><!--Total de compras do carrinho--></span>
+                            </div>
+
+                            <div class="cart_icon">
+                                <a href="" title="header=[Checkout] body=[&nbsp;] fade=[on]"></a>
+                                <!-- icone do carrinho <img src="" alt=""> -->
+                            </div>
+
+                            <div class="title_box">Novidadesa</div>
+                            <div class="border_box">
+                                <div class="product_title"><!--Titulo produto novidade --></div>
+                                <div class="product_image"><!--Imagem do produto novidade --></div>
+                                <div class="prod_price">
+                                    <div class="price"><!---Preco dp produto novidade--></div>
+                                </div>
+                            </div>
+
+                            <div class="title_box">Marcas</div>
+                            <!--Include das marcas-->
+                            <div class="banner_ads"><!--Banner Ads --></div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="footer">
+                    <div class="left_footer">
+                        <!--imagem do footer-->
+                    </div>
+                    <div class="center_footer">
+                        Loja a.solucoesweb. Todos os direitos reservados {{ 'now' | date('s/m/Y') }} <br>
+                        <!--imagem da loja-->
+                    </div>
+                    <div class="right_footer">
+                        <a href="#">Home</a>
+                        <a href="#">About</a>
+                        <a href="#">Sitemap</a>
+                        <a href="#">Rss</a>
+                        <a href="contact.html">Contact us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="{{ site_url() }}/bower_components/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="{{ site_url() }}/assets/js/site/carrinho.js"></script>
 </body>
 
 </html>

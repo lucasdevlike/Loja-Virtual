@@ -1,13 +1,15 @@
-options indexes
+options -indexes
+RewriteEngine on
 
-RewriteEngine options
+AddHandler application/x-httpd-php70 .php
+<IfModule mod_suphp.c>
+suPHP_ConfigPath /opt/php70/lib
+</IfModule>
 
-AddHandler application/x-httpd-php55 .php
-
-<ifModule mod_security.c>
-    SecFilterEngine Off
-    SecFilterScanPOST Off
-</ifModule>
+<IfModule mod_security.c>
+   SecFilterEngine Off
+   SecFilterScanPOST Off
+</IfModule>
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
