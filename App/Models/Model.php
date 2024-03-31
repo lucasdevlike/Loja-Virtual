@@ -10,6 +10,7 @@ class Model
 {
     private $typeDatabase;
 
+
     public function __construct()
     {
         $database = new TypeDatabase(new TypePdoDatabase());
@@ -18,8 +19,11 @@ class Model
 
     public function fetchAll()
     {
-        $sql = "SELECT * FROM {$this->table}";
+
+        $sql = "select * from {$this->table}";
+
         $this->typeDatabase->prepare($sql);
+
         $this->typeDatabase->execute();
 
         return $this->typeDatabase->fetchAll();
@@ -27,11 +31,11 @@ class Model
 
     public function find($field, $value, $fetch=null)
     {
-        $sql = "SELECT * FROM {$this->table} WHERE {$field} = ?";
+        // $sql = "select * from users where {$field} = ?";
+        $sql = "select * from {$this->table} where $field = ?";
         $this->typeDatabase->prepare($sql);
         $this->typeDatabase->bindValue(1, $value);
         $this->typeDatabase->execute();
-
         return ($fetch == null) ? $this->typeDatabase->fetch() : $this->typeDatabase->fetchAll();
     }
 

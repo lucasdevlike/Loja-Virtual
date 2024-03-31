@@ -14,6 +14,7 @@ class TypePdoDatabase implements InterfaceTypeDatabase
     public function __construct()
     {
         $pdo = new Connection(new ConnectPdoDatabase());
+        $this->pdo = $pdo->connectDatabase();
     }
 
     public function prepare($sql)

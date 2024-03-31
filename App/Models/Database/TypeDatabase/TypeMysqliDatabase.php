@@ -31,19 +31,19 @@ class TypeMysqliDatabase implements InterfaceTypeDatabase
 
     public function execute()
     {
-        $this->objMysqli->execute();
+        return $this->objMysqli->execute();
     }
 
 
     public function rowCount()
     {
-        $this->objMysqli->num_rows();
+        return $this->objMysqli->num_rows();
     }
 
 
     public function fetch()
     {
-        $this->objMysqli->get_result()->fetch_object();
+        return $this->objMysqli->get_result()->fetch_object();
     }
 
 
