@@ -7,7 +7,10 @@ use App\Classes\Parameters;
 
 $template = new Template();
 $twig = $template->init();
+
+//Chamando as funções do functions_Twig
 $twig->addFunction($site_url);
+$twig->addFunction($categorias);
 
 // dump($twig);
 
